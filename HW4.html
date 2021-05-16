@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Homework 4 JS</title>
+    <script>
+        function createNewUser() {
+            var Imia = prompt("Введіть ім'я");
+            var Prizvyshche = prompt("Введіть прізвище");
+            let newUser = new Object;
+            newUser = {
+                    firstName: Imia, lastName: Prizvyshche,
+                    getLogin: function(){
+                    var name = this.firstName.charAt(0).toLowerCase() + this.lastName.toLowerCase(); 
+                    console.log(name);
+                    }
+            };
+            return newUser;
+        }
+        var rezultat = createNewUser();
+        rezultat.getLogin();
+        console.log(rezultat);
+    </script>
+</head>
+<body>
+</body>
+</html>
